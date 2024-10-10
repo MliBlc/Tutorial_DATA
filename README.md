@@ -137,6 +137,7 @@ Use makeContrasts() command to define contrasts for your comparisons.
 Use eBayes() command to apply empirical Bayes moderation to the fitted model.
 
 6c. Obtain Results for Comparisons:
+
 Use topTable() command to summarize the results for each contrast.
 
 7c. Export limma Results
