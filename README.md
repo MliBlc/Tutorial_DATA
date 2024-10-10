@@ -18,6 +18,7 @@ Use read.table() command to load your metadata file (e.g., Meta.txt) into R.
 Use read.table() command to load your count data file (e.g., Counts.txt) into R, specifying the correct delimiter and setting the row names appropriately.
 
 ####### DESeq2 Analysis ######
+
 1a. Create a DESeqDataSet:
 
 Use DESeqDataSetFromMatrix() command to create a DESeqDataSet from the count data and metadata.
@@ -35,6 +36,7 @@ Use results() command to extract results for specific comparisons.
 Use write.table() or write.csv() command to save the results of the DEseq analysis.
 
 ######## edgeR Analysis ########
+
 1b. Create a Factor for Treatment Groups:
 Use factor() command to create a treatment group factor based on your metadata.
 
@@ -63,6 +65,7 @@ Use glmLRT() command to perform likelihood ratio tests for each comparison.
 Use write.table() or write.csv() command to save the results of the EdgeR analysis.
 
 ################## limma Analysis #################
+
 1c. Create a Design Matrix:
 Define treatments as factors with factor(). Use model.matrix() command to create a design model matrix based on your treatment groups. Use colnames() to add treatment names as column names to design matrix.
 
