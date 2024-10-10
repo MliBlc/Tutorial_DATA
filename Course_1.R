@@ -194,7 +194,7 @@ library(limma)
 
 # Load meta and count data
 meta <- read.table("Meta.txt", header = TRUE, sep = "\t", stringsAsFactors = TRUE)
-counts <- read.table("Count.txt", header = TRUE, sep = "\t", row.names = 1)
+counts <- read.table("Counts.txt", header = TRUE, sep = "\t", row.names = 1)
 
 # Prepare design matrix for the comparisons
 group <- factor(meta$treatments)
