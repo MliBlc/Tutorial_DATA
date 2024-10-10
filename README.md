@@ -48,7 +48,6 @@ Use results() command to extract results for specific comparisons.
 
 5a. Export DESeq2 Results
 
-
 Use write.table() or write.csv() command to save the results of the DEseq analysis.
 
 
@@ -86,14 +85,17 @@ Use estimateDisp() command to estimate dispersion for the DGEList object.
 
 
 7b. Fit the Model:
+
 Use glmFit() command to fit the model to your data.
 
 
 8b. Perform Likelihood Ratio Tests:
+
 Use glmLRT() command to perform likelihood ratio tests for each comparison.
 
 
 9b. Export edgeR Results
+
 Use write.table() or write.csv() command to save the results of the EdgeR analysis.
 
 
@@ -102,7 +104,9 @@ Use write.table() or write.csv() command to save the results of the EdgeR analys
 1c. Create a Design Matrix:
 
 Define treatments as factors with factor(). 
+
 Use model.matrix() command to create a design model matrix based on your treatment groups. 
+
 Use colnames() to add treatment names as column names to design matrix.
 
 
