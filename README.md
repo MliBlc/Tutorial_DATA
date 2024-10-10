@@ -100,31 +100,41 @@ Use write.table() or write.csv() command to save the results of the EdgeR analys
 ################## limma Analysis #################
 
 1c. Create a Design Matrix:
-Define treatments as factors with factor(). Use model.matrix() command to create a design model matrix based on your treatment groups. Use colnames() to add treatment names as column names to design matrix.
+
+Define treatments as factors with factor(). 
+Use model.matrix() command to create a design model matrix based on your treatment groups. 
+Use colnames() to add treatment names as column names to design matrix.
 
 
 group <- factor(meta$treatments)
+
 design <- model.matrix(~ 0 + group)
+
 colnames(design) <- levels(group)
 
 
 2c. Apply the Voom Transformation:
+
 Use voom() command to apply the voom transformation to your count data.
 
 
 3c. Fit the Linear Model:
+
 Use lmFit() command to fit the linear model to the transformed data.
 
 
 4c. Create Contrasts for Each Comparison:
+
 Use makeContrasts() command to define contrasts for your comparisons.
 
 
 5c. Apply Empirical Bayes Moderation:
+
 Use eBayes() command to apply empirical Bayes moderation to the fitted model.
 
 6c. Obtain Results for Comparisons:
 Use topTable() command to summarize the results for each contrast.
 
 7c. Export limma Results
+
 Use write.table() or write.csv() command to save the results of the limma analysis.
