@@ -1,9 +1,9 @@
 ######## Prep ########
 1. Set Working Directory
-2. 
 Use setwd() command to set the working directory where your data files are located.
 
-3. Install Required Libraries
+
+2. Install Required Libraries
    
 Use install.packages("BiocManager") command to install the BiocManager package, which helps in managing Bioconductor packages.
 
@@ -15,7 +15,7 @@ Use BiocManager::install("limma") command to install the limma package for linea
 
 
 
-4. Load Metadata and Count Data
+3. Load Metadata and Count Data
 
 
 Use read.table() command to load your metadata file (e.g., Meta.txt) into R.
