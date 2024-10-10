@@ -1,0 +1,10 @@
+sample	treatments
+S_1a	Control
+S_1b	Control
+S_1c	Control
+S_2a	Treatment
+S_2b	Treatment
+S_2c	Treatment
+S_3a	Treatment2
+S_3b	Treatment2
+S_3c	Treatment2
