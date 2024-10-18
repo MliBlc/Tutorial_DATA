@@ -56,7 +56,7 @@ fdr_threshold <- 0.05
 logfc_threshold <- 1
 
 ### 1. Control vs Treatment
-res1 <- results(dds, contrast = c("treatments", "Treatment", "Control"))
+res1 <- results(dds, contrast = c("treatments", "Control", "Treatment"))
 res1_df <- subset(res1)
 
 # Subset for upregulated and downregulated genes
@@ -69,7 +69,7 @@ write.csv(upregulated1, "Control_vs_Treatment_upregulated.txt", quote = FALSE, r
 write.csv(downregulated1, "Control_vs_Treatment_downregulated.txt", quote = FALSE, row.names = TRUE)
 
 ### 2. Control vs Treatment2
-res2 <- results(dds, contrast = c("treatments", "Treatment2", "Control"))
+res2 <- results(dds, contrast = c("treatments", "Control", "Treatment2"))
 res2_df <- subset(res2)
 
 # Subset for upregulated and downregulated genes
