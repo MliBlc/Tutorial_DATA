@@ -1,11 +1,7 @@
   sample  condition
-cond1_s1 cond1_s1.fwd.fq.gz  cond1
-cond1_s2 cond1_s2.fwd.fq.gz  cond1
-cond1_s3 cond1_s3.fwd.fq.gz  cond1
-cond1_s4 cond1_s4.fwd.fq.gz  cond1
-cond1_s5 cond1_s5.fwd.fq.gz  cond1
-cond2_s1 cond2_s1.fwd.fq.gz  cond2
-cond2_s2 cond2_s2.fwd.fq.gz  cond2
-cond2_s3 cond2_s3.fwd.fq.gz  cond2
-cond2_s4 cond2_s4.fwd.fq.gz  cond2
-cond2_s5 cond2_s5.fwd.fq.gz  cond2
+cond1_s1 cond1_1.fwd.fq.gz  condition1
+cond1_s2 cond1_2.fwd.fq.gz  condition1
+cond1_s3 cond1_3.fwd.fq.gz  condition1
+cond2_s1 cond2_1.fwd.fq.gz  condition2
+cond2_s2 cond2_2.fastq  condition2
+cond2_s3 cond2_3.fastq  condition2
