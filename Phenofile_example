@@ -1,7 +1,10 @@
-  sample  condition
-cond1_s1 cond1_1.fwd.fq.gz  condition1
-cond1_s2 cond1_2.fwd.fq.gz  condition1
-cond1_s3 cond1_3.fwd.fq.gz  condition1
-cond2_s1 cond2_1.fwd.fq.gz  condition2
-cond2_s2 cond2_2.fastq  condition2
-cond2_s3 cond2_3.fastq  condition2
+Sample	Treatment
+S1_1	Control
+S1_2	Control
+S1_3	Control
+S2_1	Airpol
+S2_2	Airpol
+S2_3	Airpol
+S3_1	Antioxi
+S3_2	Antioxi
+S3_3	Antioxi
