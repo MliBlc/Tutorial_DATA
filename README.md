@@ -12,14 +12,16 @@ meta <- read.csv("metaTut.txt" , header = T, sep = "\t")
 
 dds <- DESeqDataSetFromMatrix(count, meta, design = ~ Treatment)
 
+
 # Filter Low count genes
 
 smallestGroupSize <- 3
 
 keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
 
-
 dds <- dds[keep,]
+
+deseq(dds)
 
 # Remove the intermediate data
 
@@ -31,7 +33,7 @@ rm(keep)
 
 # Get All Results
 
-Control_vs_Airpol_all <- results(object = dds, contrast = c("Treatment", "Airpol","Control")
+Control_vs_Airpol_all <- results(object = dds, contrast = c("Treatment", "Airpol","Control"))
 
 Airpol_vs_Antioxi_all <- results(object = dds, contrast = c("Treatment","Antioxi","Airpol"))
 
