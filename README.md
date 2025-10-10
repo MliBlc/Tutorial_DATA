@@ -46,7 +46,7 @@ Control_vs_Airpol_down <- subset(Control_vs_Airpol_all, padj < 0.05 & log2FoldCh
 
 Airpol_vs_Antioxi_up <- subset(Airpol_vs_Antioxi_all, padj < 0.05 & log2FoldChange >= 1)
 
-Airpol_vs_Antioxi_down <- subset(Airpol_vs_Antioxi_all, padj < 0.05 & log2FoldChange <= 1-)
+Airpol_vs_Antioxi_down <- subset(Airpol_vs_Antioxi_all, padj < 0.05 & log2FoldChange <= -1)
 
 # Save results as csv
 write.csv(Control_vs_Airpol_down, "Control_vs_Airpol_downregulated.csv")
