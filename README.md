@@ -43,4 +43,4 @@ write.csv(Control_vs_Airpol_up, "Control_vs_Airpol_upregulated.csv")
 
 write.csv(Control_vs_Airpol_all, "Airpol_vs_Antioxi_All_results.csv")
 
-## Do the same again.
+## Do the same for each comparison.
