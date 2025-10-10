@@ -17,19 +17,22 @@ keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
 dds <- dds[keep,]
 
 # Remove the intermediate data
+
 rm(count)
 
 rm(meta)
 
 rm(keep)
 
-#Get All Results
+# Get All Results
+
 Control_vs_Airpol_all <- results(object = dds, contrast = c("Treatment", "Airpol","Control")
 
 Airpol_vs_Antioxi_all <- results(object = dds, contrast = c("Treatment","Antioxi","Airpol"))
 
 
 # Get up and down regulated genes
+
 Control_vs_Airpol_up <- subset(Control_vs_Airpol_all, padj < 0.05 & log2FoldChange >= 1)
 
 Control_vs_Airpol_down <- subset(Control_vs_Airpol_all, padj < 0.05 & log2FoldChange <= 1)
