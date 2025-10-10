@@ -5,14 +5,19 @@
 library(DESeq2)
 
 # Load Count and meta data
+
 count <- read.csv("RNA_seq_counts.txt" , header = T, sep = "\t", row.names = 1)
 
 meta <- read.csv("metaTut.txt" , header = T, sep = "\t")
 
+dds <- DESeqDataSetFromMatrix(count, meta, design = ~ Treatment)
+
 # Filter Low count genes
+
 smallestGroupSize <- 3
 
 keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
+
 
 dds <- dds[keep,]
 
