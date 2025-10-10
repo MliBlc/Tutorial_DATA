@@ -1,4 +1,4 @@
-##-- Basic R scripts for begginers --##
+## Basic R scripts for begginers ##
 
 
 # Load library
