@@ -21,7 +21,7 @@ keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
 
 dds <- dds[keep,]
 
-deseq(dds)
+DESeq(dds)
 
 # Remove the intermediate data
 
