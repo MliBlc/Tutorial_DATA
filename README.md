@@ -1,4 +1,4 @@
-Basic R scripts for begginers
+##-- Basic R scripts for begginers --##
 
 
 # Load library
@@ -36,7 +36,7 @@ Control_vs_Airpol_up <- subset(Control_vs_Airpol_all, padj < 0.05 & log2FoldChan
 
 Control_vs_Airpol_down <- subset(Control_vs_Airpol_all, padj < 0.05 & log2FoldChange <= 1)
 
-#Save results as csv
+# Save results as csv
 write.csv(Control_vs_Airpol_down, "Control_vs_Airpol_downregulated.csv")
 
 write.csv(Control_vs_Airpol_up, "Control_vs_Airpol_upregulated.csv")
