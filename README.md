@@ -11,8 +11,11 @@ count <- read.csv("RNA_seq_counts.txt" , header = T, sep = "\t", row.names = 1)
 meta <- read.csv("metaTut.txt" , header = T, sep = "\t")
 
 dds <- DESeqDataSetFromMatrix(count, meta, design = ~ Treatment)
+
 smallestGroupSize <- 3
+
 keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
+
 dds <- dds[keep,]
 
 DESeq(dds) -> dds
