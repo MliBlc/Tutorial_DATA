@@ -15,7 +15,7 @@ dds <- DESeqDataSetFromMatrix(count, meta, design = ~ Treatment)
 
 # Filter Low count genes
 
-keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
+keep <- rowSums(counts(dds) >= 10)
 
 dds <- dds[keep,]
 
