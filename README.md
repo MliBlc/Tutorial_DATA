@@ -51,6 +51,6 @@ write.csv(Control_vs_Airpol_down, "Control_vs_Airpol_downregulated.csv")
 
 write.csv(Control_vs_Airpol_up, "Control_vs_Airpol_upregulated.csv")
 
-write.csv(Control_vs_Airpol_all, "Airpol_vs_Antioxi_All_results.csv")
+write.csv(Control_vs_Airpol_all, "Control_vs_Airpol_All_results.csv")
 
 ## Do the same for each comparison.
