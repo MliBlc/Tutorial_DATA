@@ -1,13 +1,3 @@
-#!/usr/bin/env Rscript
-
-## ================================================================
-## Kraken2 mock data + alpha/beta diversity demo
-## - Generates mock species counts (50 species)
-## - Generates mock sample metadata
-## - Writes TSV files (so students see “real” inputs)
-## - Reads them back in and runs diversity analyses
-## ================================================================
-
 
 library(tidyverse)
 library(vegan)
