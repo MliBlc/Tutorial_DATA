@@ -1,34 +1,25 @@
-#!/usr/bin/env Rscript
 
-suppressPackageStartupMessages({
-  library(tidyverse)
-  library(vegan)
-})
+library(tidyverse)
+library(vegan)
 
-## ------------------------------------------------------------------
-## User settings
-## ------------------------------------------------------------------
+
 counts_file <- "kraken_species_counts.tsv"   # Species x Samples
 meta_file   <- "sample_metadata.tsv"         # Optional Sample, Group
 outdir      <- "diversity_results"
 
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
-## ------------------------------------------------------------------
-## Read data
-## ------------------------------------------------------------------
+
 cat("Reading counts from:", counts_file, "\n")
 counts_df <- read_tsv(counts_file, col_types = cols())
 
-# First column = Species, remaining = samples
+
 counts_mat <- counts_df %>%
   column_to_rownames("Species") %>%
   as.matrix()
 
-# Ensure numeric
 storage.mode(counts_mat) <- "numeric"
 
-# vegan expects community matrix with rows = samples, cols = species
 comm <- t(counts_mat)
 
 if (any(comm < 0, na.rm = TRUE)) {
@@ -37,9 +28,6 @@ if (any(comm < 0, na.rm = TRUE)) {
 
 cat("Matrix dimensions (samples x species):", dim(comm)[1], "x", dim(comm)[2], "\n")
 
-## ------------------------------------------------------------------
-## Alpha diversity
-## ------------------------------------------------------------------
 
 cat("Computing alpha diversity...\n")
 
@@ -72,9 +60,6 @@ alpha_out <- file.path(outdir, "alpha_diversity.tsv")
 write_tsv(alpha_df, alpha_out)
 cat("Alpha diversity written to:", alpha_out, "\n")
 
-## ------------------------------------------------------------------
-## Beta diversity (distance matrices)
-## ------------------------------------------------------------------
 
 cat("Computing beta diversity (Bray-Curtis, Jaccard)...\n")
 
