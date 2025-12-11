@@ -8,10 +8,11 @@
 ## - Reads them back in and runs diversity analyses
 ## ================================================================
 
-suppressPackageStartupMessages({
-  library(tidyverse)
-  library(vegan)
-})
+
+library(tidyverse)
+library(vegan)
+library(ggplot2)
+
 
 set.seed(42)
 
