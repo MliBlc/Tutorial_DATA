@@ -9,7 +9,7 @@
 # ggplot2  : plotting backend
 # haplotypes: haplotype frequency calculations
 
-install.packages("BiocManager)
+install.packages("BiocManager")
 BiocManager::install(c("msa", "ggtree"))
 cran_packages <- c("tidyverse", "ape", "pegas", "ggplot2", "haplotypes", "adegenet", "hierfstat") 
 
