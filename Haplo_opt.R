@@ -27,7 +27,7 @@ library(adegenet)
 library(hierfstat)
 
 # Input FASTA file (unaligned or aligned)
-fasta_file <- "S2_Appendix.fas"
+fasta_file <- "journal.pone.0243927.s002.fas"
 
 
 ############################
